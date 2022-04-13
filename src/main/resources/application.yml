@@ -1,0 +1,17 @@
+spring:
+  main:
+#    解决循环依赖 ----不懂
+    allow-circular-references: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://101.43.217.252:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+server:
+  port: 9000
+mybatis:
+  # 配置 mapper文件加载的位置
+  mapper-locations: classpath:mappers/*Mapper.xml
+  # 配置别名
+  type-aliases-package: com.itheima.pojo
+
